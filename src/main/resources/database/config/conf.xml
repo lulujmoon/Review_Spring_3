@@ -8,5 +8,6 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="com.redbeet.whatI.member.MemberDTO" alias="MemberDTO"/>
+		<typeAlias type="com.redbeet.whatI.game.GameDTO" alias="GameDTO"/>
 	</typeAliases>
 </configuration>

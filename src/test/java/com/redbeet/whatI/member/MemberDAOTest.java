@@ -54,4 +54,4 @@ public class MemberDAOTest extends MyAbstractTest{
 //		int result = memberDAO.deleteAccount(memberDTO);
 //		assertNotEquals(0, result);
 //	}
-//}
+}
