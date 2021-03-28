@@ -29,9 +29,9 @@
          		<a class="dropdown-item" href="#"></a>
         	</c:if>
 			<c:if test="${not empty member }">
-      			<a class="dropdown-item" href="/whatI/member/memberInfo">Manage Account</a>
+      			<a class="dropdown-item" href="/whatI/member/updateInfo">Manage Account</a>
+         		<a class="dropdown-item" href="#">Manage Review</a>			
         		<a class="dropdown-item" href="/whatI/member/signOut">Sign out</a>
-         		<a class="dropdown-item" href="#"></a>			
 			</c:if>
         </div>
       </li>

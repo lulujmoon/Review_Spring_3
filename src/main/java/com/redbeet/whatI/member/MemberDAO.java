@@ -19,4 +19,12 @@ public class MemberDAO {
 	public int signUp(MemberDTO memberDTO) throws Exception {
 		return sqlSession.insert(NAMESPACE+"signUp", memberDTO);
 	}
+	
+	public int updateInfo(MemberDTO memberDTO) throws Exception {
+		return sqlSession.update(NAMESPACE+"updateInfo", memberDTO);
+	}
+	
+	public int deleteAccount(MemberDTO memberDTO) throws Exception {
+		return sqlSession.delete(NAMESPACE+"deleteAccount", memberDTO);
+	}
 }

@@ -16,16 +16,14 @@ public class MemberController {
 	private MemberService memberService;
 	
 	@RequestMapping(value="signIn")
-	public void signIn() throws Exception {
-		
-	}
+	public void signIn() throws Exception {}
 	
 	
 	@RequestMapping(value="signIn", method= RequestMethod.POST)
 	public String signIn(MemberDTO memberDTO, HttpSession session) throws Exception {
 		memberDTO = memberService.signIn(memberDTO);
 		session.setAttribute("member", memberDTO);
-		String re = "./signIn";
+		String re = "/member/signIn";
 		if(memberDTO!=null) {
 			re = "redirect:../";
 		}
@@ -39,18 +37,42 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="signUp")
-	public void signUp() throws Exception {
-		
-	}
+	public void signUp() throws Exception {}
 	
 	@RequestMapping(value="signUp", method = RequestMethod.POST)
 	public String signUp(MemberDTO memberDTO) throws Exception {
 		int result = memberService.signUp(memberDTO);
-		String re = "./signUp";
+		String re = "/member/signUp";
 		if(result!=0) {
 			re = "redirect:../";
 		}
 		return re;
 	}
+	
+	@RequestMapping(value="updateInfo")
+	public void updateInfo() throws Exception {}
 
+	@RequestMapping(value="updateInfo", method= RequestMethod.POST)
+	public String updateInfo(MemberDTO memberDTO, HttpSession session) throws Exception {
+		int result = memberService.updateInfo(memberDTO);
+		String re = "/member/updateInfo";
+		if(result!=0) {
+			session.setAttribute("member", memberDTO);
+			re="redirect: ../";
+		}
+		return re;
+	}
+	
+	@RequestMapping(value="deleteQ")
+	public String deleteQ() throws Exception{
+		return "/member/deleteAccount";
+	}
+	
+	@RequestMapping(value="deleteAccount")
+	public String deleteAccount(HttpSession session) throws Exception {
+		MemberDTO memberDTO = (MemberDTO)session.getAttribute("member");
+		memberService.deleteAccount(memberDTO);
+		session.invalidate();
+		return "redirect:../";
+	}
 }

@@ -34,4 +34,24 @@ public class MemberDAOTest extends MyAbstractTest{
 //		
 //		assertNotEquals(0, result);
 //	}
-}
+	
+//	@Test
+//	public void updateInfoTest() throws Exception {
+//		MemberDTO memberDTO = new MemberDTO();
+//		memberDTO.setId("nayoung9");
+//		memberDTO.setPw("nayoeee96");
+//		memberDTO.setName("강냉빵");
+//		memberDTO.setEmail("koo96000@gmail.com");
+//		int result = memberDAO.updateInfo(memberDTO);
+//		
+//		assertNotEquals(0, result);
+//	}
+	
+//	@Test
+//	public void deleteAccountTest() throws Exception {
+//		MemberDTO memberDTO = new MemberDTO();
+//		memberDTO.setId("admin");
+//		int result = memberDAO.deleteAccount(memberDTO);
+//		assertNotEquals(0, result);
+//	}
+//}

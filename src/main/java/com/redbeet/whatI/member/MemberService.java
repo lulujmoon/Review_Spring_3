@@ -16,4 +16,12 @@ public class MemberService {
 	public int signUp(MemberDTO memberDTO) throws Exception {
 		return memberDAO.signUp(memberDTO);
 	}
+	
+	public int updateInfo(MemberDTO memberDTO) throws Exception {
+		return memberDAO.updateInfo(memberDTO);
+	}
+	
+	public int deleteAccount(MemberDTO memberDTO) throws Exception {
+		return memberDAO.deleteAccount(memberDTO);
+	}
 }
