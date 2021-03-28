@@ -12,7 +12,11 @@ public class MemberDAO {
 
 	private final String NAMESPACE = "com.redbeet.whatI.member.MemberDAO.";
 	
-	public MemberDTO memberLogin(MemberDTO memberDTO) throws Exception {
-		return sqlSession.selectOne(NAMESPACE+"memberLogin", memberDTO);
+	public MemberDTO signIn(MemberDTO memberDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"signIn", memberDTO);
+	}
+	
+	public int signUp(MemberDTO memberDTO) throws Exception {
+		return sqlSession.insert(NAMESPACE+"signUp", memberDTO);
 	}
 }
