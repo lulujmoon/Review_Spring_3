@@ -17,8 +17,8 @@
 				<tr>
 					<th style="width:8%">no</th>
 					<th style="width:37%">Title</th>
-					<th style="width:25%">Developer</th>
-					<th style="width:20%">Release Date</th>
+					<th style="width:30%">Developer</th>
+					<th style="width:15%">Release Date</th>
 					<th style="width:10%">Rate</th>
 				</tr>
 			</thead>

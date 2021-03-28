@@ -8,4 +8,8 @@
 	<select id="gameList" resultType="GameDTO">
 		select * from game order by num desc
 	</select>
+	
+	<insert id="gameInsert" parameterType="GameDTO">
+		insert into game values (game_seq.nextval, #{title}, #{developer}, #{release_date}, #{rate})
+	</insert>
 </mapper>

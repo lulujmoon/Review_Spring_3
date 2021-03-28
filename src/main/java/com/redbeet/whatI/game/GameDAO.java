@@ -17,4 +17,8 @@ public class GameDAO {
 	public List<GameDTO> gameList() throws Exception {
 		return sqlSession.selectList(NAMESPACE+"gameList");
 	}
+	
+	public int gameInsert(GameDTO gameDTO) throws Exception {
+		return sqlSession.insert(NAMESPACE+"gameInsert", gameDTO);
+	}
 }

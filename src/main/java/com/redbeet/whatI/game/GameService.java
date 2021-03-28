@@ -14,5 +14,9 @@ public class GameService {
 	public List<GameDTO> gameList() throws Exception {
 		return gameDAO.gameList();
 	}
+	
+	public int gameInsert(GameDTO gameDTO) throws Exception {
+		return gameDAO.gameInsert(gameDTO);
+	}
 
 }
