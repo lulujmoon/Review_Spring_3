@@ -9,7 +9,36 @@ public class GameDTO {
 	private String developer;
 	private Date release_date;
 	private double rate;
+	private String genre;
+	private String platform;
+	private String info;
+	private int price;
 	
+	
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+	public String getPlatform() {
+		return platform;
+	}
+	public void setPlatform(String platform) {
+		this.platform = platform;
+	}
+	public String getInfo() {
+		return info;
+	}
+	public void setInfo(String info) {
+		this.info = info;
+	}
 	public long getNum() {
 		return num;
 	}

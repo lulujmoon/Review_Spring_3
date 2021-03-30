@@ -26,7 +26,7 @@
 				<c:forEach items="${list}" var="game">
 					<tr>
 						<td>${game.num}</td>
-						<td><a href="#">${game.title}</a></td>
+						<td><a href="./gameSelect?num=${game.num}">${game.title}</a></td>
 						<td>${game.developer}</td>
 						<td>${game.release_date}</td>
 						<td>${game.rate}</td>
@@ -35,7 +35,7 @@
 			</tbody>
 		</table>
 		<c:if test="${not empty member and member.id eq 'admin' }">
-		<a href="./addNewGame" class="btn btn-info">Add</a>
+		<a href="./newGame" class="btn btn-info" style="float:right">Add</a>
 		</c:if>
 	</div>
 </body>

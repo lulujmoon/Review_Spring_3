@@ -10,6 +10,13 @@
 	</select>
 	
 	<insert id="gameInsert" parameterType="GameDTO">
-		insert into game values (game_seq.nextval, #{title}, #{developer}, #{release_date}, 0.0)
+		insert into game (num, title, developer, genre, rate, release_date, platform, info, price)
+		values (game_seq.nextval, #{title}, #{developer}, #{genre}, 0, #{release_date}, #{platform}, #{info}, #{price})
 	</insert>
+	
+	<select id="gameSelect" parameterType="GameDTO" resultType="GameDTO">
+		select * from game where num=#{num}
+	</select>
+	
+
 </mapper>

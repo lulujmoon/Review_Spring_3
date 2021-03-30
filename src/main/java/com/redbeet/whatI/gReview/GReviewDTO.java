@@ -1,6 +1,6 @@
-package com.redbeet.whatI.game_review;
+package com.redbeet.whatI.gReview;
 
-public class Game_reviewDTO {
+public class GReviewDTO {
 	
 	private long num;
 	private long game_num;

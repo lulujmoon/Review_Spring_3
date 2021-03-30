@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.redbeet.whatI.gReview.GReviewDTO;
+
 @Repository
 public class GameDAO {
 
@@ -20,5 +22,13 @@ public class GameDAO {
 	
 	public int gameInsert(GameDTO gameDTO) throws Exception {
 		return sqlSession.insert(NAMESPACE+"gameInsert", gameDTO);
+	}
+	
+	public GameDTO gameSelect(GameDTO gameDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"gameSelect", gameDTO);
+	}
+	
+	public GameDTO getRate(GReviewDTO gReviewDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"getRate", gReviewDTO);
 	}
 }
