@@ -29,7 +29,7 @@ public class GameController {
 		int result = gameService.gameInsert(gameDTO);
 		String re="/game/addNewGame";
 		if(result!=0) {
-			re="redirect:../";
+			re="redirect:./gameList";
 		}
 		return re;
 	}

@@ -34,6 +34,9 @@
 				</c:forEach>
 			</tbody>
 		</table>
+		<c:if test="${not empty member and member.id eq 'admin' }">
+		<a href="./addNewGame" class="btn btn-info">Add</a>
+		</c:if>
 	</div>
 </body>
 </html>

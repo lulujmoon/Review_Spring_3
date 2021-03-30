@@ -10,6 +10,6 @@
 	</select>
 	
 	<insert id="gameInsert" parameterType="GameDTO">
-		insert into game values (game_seq.nextval, #{title}, #{developer}, #{release_date}, #{rate})
+		insert into game values (game_seq.nextval, #{title}, #{developer}, #{release_date}, 0.0)
 	</insert>
 </mapper>

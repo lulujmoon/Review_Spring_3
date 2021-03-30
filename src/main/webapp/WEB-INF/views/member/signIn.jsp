@@ -5,7 +5,7 @@
 <html>
 <head>
 <c:import url="../template/bootstrap.jsp"></c:import>
-<title>Login</title>
+<title>Sign In</title>
 </head>
 <body>
 	<c:import url="../template/header.jsp"></c:import>

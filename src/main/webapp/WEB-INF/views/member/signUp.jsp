@@ -5,7 +5,7 @@
 <html>
 <head>
 <c:import url="../template/bootstrap.jsp"></c:import>
-<title>Insert title here</title>
+<title>Sign Up</title>
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
