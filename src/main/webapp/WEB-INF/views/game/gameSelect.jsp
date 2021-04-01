@@ -48,14 +48,15 @@
 	<br><br>
 	<h4 style="display: inline-block;float:left">Reviews</h4>
 	<c:if test="${not empty member}">
-		<a href="../gReview/newGReview?game_num=${game.num}" class="btn btn-info" style="float:right;margin-bottom:10px">Write</a>
+		<a href="../gReview/newGReview?game_num=${game.num}" class="btn btn-info btn-sm" style="float:right;margin-bottom:10px">Write</a>
 	</c:if>
 	<table class="table table-hover">
 		<thead>
 			<tr>
-				<th>ID</th>
-				<th>Comment</th>
-				<th>Rate</th>
+				<th style="width:20%">ID</th>
+				<th style="width:57%">Comment</th>
+				<th style="width:8%">Rate</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -64,6 +65,10 @@
 					<td><a href="../member/memberSelect">${re.id}</a></td>
 					<td>${re.comments}</td>
 					<td>${re.rate}</td>
+					<td> <c:if test="${member.id eq re.id}">
+							<a class="btn btn-outline-secondary btn-sm" href="../gReview/gReviewUpdate">Edit</a>
+							<a class="btn btn-outline-secondary btn-sm" href="../gReview/gReviewDelete?num=${re.num}">Delete</a>
+						 </c:if> </td>
 				</tr>
 			</c:forEach>
 		</tbody>

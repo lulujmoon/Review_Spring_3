@@ -26,4 +26,12 @@ public class GReviewDAO {
 	public int updateRate(GReviewDTO gReviewDTO) throws Exception {
 		return sqlSession.update(NAMESPACE+"updateRate", gReviewDTO);
 	}
+	
+	public int gReviewDelete(GReviewDTO gReviewDTO) throws Exception {
+		return sqlSession.delete(NAMESPACE+"gReviewDelete", gReviewDTO);
+	}
+	
+	public GReviewDTO gReviewSelect(GReviewDTO gReviewDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"gReviewSelect", gReviewDTO);
+	}
 }

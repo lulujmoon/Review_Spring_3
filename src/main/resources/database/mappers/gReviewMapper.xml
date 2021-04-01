@@ -18,4 +18,13 @@
 	<update id="updateRate" parameterType="GReviewDTO">
 		update game set rate=(select avg(rate) from game_review where game_num=#{game_num}) where num=#{game_num}
 	</update>
+	
+	<select id="gReviewSelect" parameterType="GReviewDTO" resultType="GReviewDTO">
+		select * from game_review where num=#{num}
+	</select>
+	
+	
+	<delete id="gReviewDelete" parameterType="GReviewDTO">
+		delete game_review where num=#{num}
+	</delete>
 </mapper>

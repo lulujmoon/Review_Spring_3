@@ -1,19 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<c:import url="../template/bootstrap.jsp"></c:import>
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<c:import url="../template/header.jsp"></c:import>
 <div class="container">
 	<br>
 	<br>
 	<c:if test="${not empty member}">
-	<h2>Write Review of ${game.title}</h2>
+	<h2>Update Review</h2>
 	<br>
 			<form action="./newGReview" method="post">
 			<div>
